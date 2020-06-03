@@ -1,25 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Iceland&family=Montserrat:wght@400;500&display=swap");
 /* Resetowanie HTML */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-} 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 /* Domyślne ustawienia */
 html,
 body {
@@ -37,7 +105,16 @@ ul {
 a:hover {
   text-decoration: none;
 }
-
+.spacer {
+  width: 100%;
+  height: 20vh;
+  background-color: rgba(252, 90, 134, 0.9);
+}
+.containter {
+  width: 70%;
+  padding-left: 15%;
+  align-items: center;
+}
 /* Body */
 body {
   background-image: url("../img/mainImgTheme.jpg");
@@ -47,31 +124,32 @@ body {
 }
 /* Nawigacja */
 nav {
-    color: white;
-    width: 100vw;
-    height: 60px;
-    position: fixed;
-    background-color: rgb(10, 29, 72);
-    box-shadow: 1px 2px 2px rgb(252, 90, 134);
-    display: flex;
-    align-items: center;
-    padding-left: 22.5%;
+  color: white;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background-color: rgb(10, 29, 72);
+  box-shadow: 1px 2px 2px rgb(252, 90, 134);
+  display: flex;
+  align-items: center;
+  padding-left: 22.5%;
+  z-index: 10;
 }
 nav > ul > li {
-    display: inline;
-    padding-left: 25px;
+  display: inline;
+  padding-left: 25px;
 }
 nav > ul > li > a {
-    color: white; 
+  color: white;
 }
 nav a:hover {
-    color: rgb(252, 90, 134);
-    text-shadow: 1px 1px 1px rgb(112, 112, 112);
+  color: rgb(252, 90, 134);
+  text-shadow: 1px 1px 1px rgb(112, 112, 112);
 }
 #spacer {
-    height: 60px;
-    width: 100%;
-  }
+  height: 60px;
+  width: 100%;
+}
 nav > a {
   font-family: "Iceland", cursive;
   color: white;
@@ -80,7 +158,7 @@ nav > a {
 #przycisk-koszyk {
   width: 35px;
   height: 35px;
-  background-color: rgb(255,255,255);
+  background-color: rgb(255, 255, 255);
   background-image: url("../img/trolley.png");
   background-repeat: no-repeat;
 }
@@ -89,36 +167,97 @@ nav > a {
 }
 /* Wizytowka */
 .wizytowka {
-    color: white;
-    text-shadow: 1px 1px 2px rgb(46, 46, 46);
-    font-family: "Iceland", cursive;
-    width: 100vw;
-    height: calc(100% - 60px);
-    display: flex;
-    padding-top: 30vh;
-    flex-direction: column;
-    align-items: center;
+  color: white;
+  text-shadow: 0px -1px 2px rgb(46, 46, 46);
+  font-family: "Iceland", cursive;
+  width: 100%;
+  height: calc(100% - 60px);
+  display: flex;
+  padding-top: 30vh;
+  flex-direction: column;
+  align-items: center;
 }
 .wizytowka h1 {
-    font-size: 10rem;
-    top: 50vh;
+  font-size: 10rem;
+  top: 50vh;
 }
 .wizytowka h3 {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 /* Przycisk */
 .przycisk {
-    font-family: "Montserrat", sans-serif;
-    color: white;
-    font-weight: bold;
-    font-size: 1.5em;
-    padding: 10px 10px 10px 10px;
-    background-color: transparent;
-    border-radius: 10px;
-    border-color: white;
-    border-style: solid;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 10px 10px 10px 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  border-color: white;
+  border-style: solid;
 }
 .przycisk:hover {
   background-color: rgb(252, 90, 134);
   border-color: rgb(252, 90, 134);
+}
+
+#wizytowka-projekty {
+  height: 60%;
+}
+
+#wizytowka-technologie {
+  height: 40%;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
+}
+.technologia {
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  height: 30vh;
+  top: 5vh;
+}
+#vuejs {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+#typeScript {
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
+#scss {
+  grid-column-start: 6;
+  grid-column-end: 6;
+}
+#polecenia {
+  height: 50%;
+}
+
+#omnie {
+  text-align: center;
+  color: white;
+  height: 60%;
+  width: 100%;
+  background-color: rgba(10, 29, 72, 0.5);
+}
+#omnie  h2 {
+  font-family: "Iceland", cursive;
+  font-size: 3rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#omnie p {
+  font-size: 1.5rem;
+}
+footer {
+  height: 30px;
+  color: white;
+  text-shadow: 0px -1px 2px rgba(46, 46, 46, 0.5);
+  background-color: rgb(252, 90, 134);
+  box-shadow: 0px -2px 2px rgb(10, 29, 72);
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: center;
+  padding-top: 7px;
 }
