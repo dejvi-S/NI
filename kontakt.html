@@ -35,10 +35,11 @@
       crossorigin="anonymous"
     ></script>
     <title>dejviS</title>
+    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
 
     <!-- Personalizowany kod CSS -->
     <link rel="stylesheet" href="css/main.css" />
-
+    <link rel="stylesheet" href="css/kontakt.css">
     <!-- Personalizowany kod JavaScript -->
     <script src="js/main.js"></script>
   </head>
@@ -50,10 +51,38 @@
         <li><a href="oferta.html">Oferta</a></li>
         <li><a href="#">Kontakt</a></li>
         <li>
-          <button type="button" class="przycisk" id="przycisk-koszyk" onclick="window.location = 'koszyk.html'"></button>
+          <button
+            type="button"
+            class="przycisk"
+            id="przycisk-koszyk"
+            onclick="window.location = 'koszyk.html'"
+          ></button>
         </li>
       </ul>
     </nav>
+    <div id="spacer"></div>
+    <form>
+      <h1>FORMULARZ KONTAKTOWY</h1>
+      <div class="formularz">
+        <label for="imie">Imię</label>
+        <input type="text" id="imie" placeholder="Imię">
+        <label for="nazwisko">Nazwisko</label>
+        <input type="text" id="nazwisko" placeholder="Nazwisko">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Mail">
+        <label for="numerTel">Telefon</label>
+        <input type="number" id="numerTel" placeholder="Numer" min=0>
+        <label for="wiadomosc">Wiadomość</label>
+        <textarea id="wiadomosc" rows="4" cols="50"></textarea>
+        <div class="checkbox">
+          <input type="checkbox" id="labelCheckbox" required>
+          <label for="labelCheckbox">Potwierdzam 100% nieznajomość regulaminu.</label>
+        </div>
+        <button type="submit" id="przycisk-formularz">Wyślij</button>
+        <button type="reset" id="przycisk-formularz">Wyczyść</button>
+      </div>
+    </form>
+
     <footer>Dawid Zając | Projekt 2k20 Narzędzia Internetowe</footer>
   </body>
 </html>

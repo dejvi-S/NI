@@ -115,12 +115,24 @@ a:hover {
   padding-left: 15%;
   align-items: center;
 }
+.checkbox {
+  display: flex;
+  flex-direction: row;
+}
 /* Body */
 body {
   background-image: url("../img/mainImgTheme.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 /* Nawigacja */
 nav {
@@ -241,7 +253,7 @@ nav > a {
   width: 100%;
   background-color: rgba(10, 29, 72, 0.5);
 }
-#omnie  h2 {
+#omnie h2 {
   font-family: "Iceland", cursive;
   font-size: 3rem;
   padding-top: 20px;
