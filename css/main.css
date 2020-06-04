@@ -321,10 +321,22 @@ footer {
   }
 }
 #polecenia {
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-content: center;
+  align-items: center;
 }
 .komentarze {
-  
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  width: 60%;
+  color: rgb(10, 29, 72);
+  height: 100px;
+  background-color: white;
+  text-align: center;
+}
+.komentarze img {
+  height: 20px;
+  width: 50px;
 }
