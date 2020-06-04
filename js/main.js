@@ -2,6 +2,13 @@ $('.carousel').carousel({
   interval: 100
 })
 
+function animacjaKoszyka() {
+  if(JSON.parse(localStorage.getItem('lista')) != null )
+    document.getElementById("przycisk-koszyk").classList.add("animacjakoszyk");
+  else
+  document.getElementById("przycisk-koszyk").classList.remove("animacjakoszyk");
+}
+
 function zapiszZamowienie() {
 
     var zamowienie = {};
