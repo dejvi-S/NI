@@ -35,14 +35,16 @@
       crossorigin="anonymous"
     ></script>
     <title>dejviS</title>
-    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     <!-- Personalizowany kod CSS -->
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/kontakt.css" />
+    <link rel="stylesheet" href="css/koszyk.css" />
 
     <!-- Personalizowany kod JavaScript -->
     <script src="js/main.js"></script>
   </head>
-  <body>
+  <body onload="pokazZamowienia()">
     <nav>
       <a href="index.html">dejviS</a>
       <ul>
@@ -50,11 +52,107 @@
         <li><a href="oferta.html">Oferta</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
         <li>
-          <button type="button" class="przycisk" id="przycisk-koszyk" onclick="window.location = 'koszyk.html'"></button>
+          <button
+            type="button"
+            class="przycisk"
+            id="przycisk-koszyk"
+            onclick="window.location = 'koszyk.html'"
+          ></button>
         </li>
       </ul>
     </nav>
     <div id="spacer"></div>
+    <div id="kosz">
+      <h2>Koszyk</h2>
+      <div id="kontenerZakupow">
+
+      </div>
+    </div>
+    <div id="formularzZamowienia">
+      <form action="#" method="post">
+        <h1>FORMULARZ ZAMÓWIENIA</h1>
+        <div class="formularz">
+          <label for="imie">Imię</label>
+          <input
+            type="text"
+            id="imie"
+            placeholder="Imię"
+            title="Podaj imię zanczynając od wielkiej litery"
+            required
+            pattern="[A-ZĄŃĘŚŹŻŁĆÓ]{1}[a-ząśęńżźłćó]{1,19}"
+          />
+          <label for="nazwisko">Nazwisko</label>
+          <input
+            type="text"
+            id="nazwisko"
+            placeholder="Nazwisko"
+            title="Podaj nazwisko zanczynając od wielkiej litery, nazwisko dwuczłonowe odziel znakiem '-'"
+            required
+            pattern="([A-ZĄŚŹĘŃŻŁĆÓ]{1}[a-ząśńężźłćó]{1,19})(-?[A-ZĄŚŹŃĘŻŁĆÓ]{1}[a-ząśńężźłćó]{1,19})?"
+          />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Mail"
+          />
+          <label for="adres">Adres</label>
+          <input
+            type="text"
+            id="adres"
+            placeholder="Adres"
+            required
+            pattern="([A-ZĄĘŚŹŻŁĆÓ]{1}[a-ząęśżźłćó]{1,19}[\s]{0,})+"
+            title="Każdy człon nazwy zaczynaj od wielkiej litery "
+          />
+          <div class="groupout">
+            <div class="groupin">
+              <label for="dom">Numer domu</label>
+              <input
+                type="text"
+                id="dom"
+                placeholder="Numer domu"
+                pattern="[1-9]{1}([0-9])+"
+              />
+            </div>
+            <div class="groupin">
+              <label for="kod">Kod pocztowy</label>
+              <input
+                type="text"
+                id="kod"
+                placeholder="Kod - pocztowy"
+                pattern="\d{2}-\d{3}"
+              />
+            </div>
+          </div>
+          <label for="numerTel">Telefon</label>
+          <input
+            type="tel"
+            id="numerTel"
+            placeholder="Numer telefonu"
+            pattern="[0-9]{9}"
+          />
+          <label for="strona">Strona WWW</label>
+          <input type="text" id="strona" required placeholder="">
+          <div class="groupout checkout">
+            <div class="checkin">
+              <input type="checkbox" id="seo"><img src="img/google.png" alt="google"><p>SEO</p>
+            </div>
+            <div class="checkin">
+              <input type="checkbox" id="analityka"><img src="img/analysis.png" alt="analityka"><p>Analityka</p>
+            </div>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="labelCheckbox" required />
+            <label for="labelCheckbox">Nie znam regulaminu</label>
+          </div>
+          <button type="submit" id="przyciskGlowny" onclick="zapiszZamowienie()" class="przycisk-formularz">Zamów</button>
+          <button type="submit" id="przyciskZmienione" onclick="zapiszZmienioneZamowienie()" class="przycisk-formularz">Zmień zamówienie</button>
+          <button type="reset" class="przycisk-formularz">Wyczyść</button>
+        </div>
+      </form>
+    </div>
+    <div class="spacer" style="background-color: transparent;"></div>
     <footer>Dawid Zając | Projekt 2k20 Narzędzia Internetowe</footer>
   </body>
 </html>

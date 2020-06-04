@@ -64,21 +64,41 @@
     <form>
       <h1>FORMULARZ KONTAKTOWY</h1>
       <div class="formularz">
-        <label for="imie">Imię</label>
-        <input type="text" id="imie" placeholder="Imię">
-        <label for="nazwisko">Nazwisko</label>
-        <input type="text" id="nazwisko" placeholder="Nazwisko">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Mail">
-        <label for="numerTel">Telefon</label>
-        <input type="number" id="numerTel" placeholder="Numer" min=0>
+        <label for="imiek">Imię</label>
+          <input
+            type="text"
+            id="imiek"
+            placeholder="Imię"
+            title="Podaj imię zanczynając od wielkiej litery"
+            required
+            pattern="[A-ZĄŃĘŚŹŻŁĆÓ]{1}[a-ząśńężźłćó]{1,19}"
+          />
+          <label for="nazwiskok">Nazwisko</label>
+          <input
+            type="text"
+            id="nazwiskok"
+            placeholder="Nazwisko"
+            title="Podaj nazwisko zanczynając od wielkiej litery, nazwisko dwuczłonowe odziel znakiem '-'"
+            required
+            pattern="([A-ZĄŃĘŚŹŻŁĆÓ]{1}[a-ząęśżźłńćó]{1,19})(-?[A-ZĄĘŃŚŹŻŁĆÓ]{1}[a-ząńęśżźłćó]{1,19})?"
+          />
+        <label for="emailk">Email</label>
+        <input type="email" id="emailk" placeholder="Mail">
+        <label for="numerTelk">Telefon</label>
+          <input
+            type="tel"
+            id="numerTelk"
+            placeholder="Numer telefonu"
+            pattern="[0-9]{9}"
+            required
+          />
         <label for="wiadomosc">Wiadomość</label>
         <textarea id="wiadomosc" rows="4" cols="50"></textarea>
         <div class="checkbox">
           <input type="checkbox" id="labelCheckbox" required>
           <label for="labelCheckbox">Potwierdzam 100% nieznajomość regulaminu.</label>
         </div>
-        <button type="submit" class="przycisk-formularz">Wyślij</button>
+        <button type="submit" onclick="sendMessage()" class="przycisk-formularz">Wyślij</button>
         <button type="reset" class="przycisk-formularz">Wyczyść</button>
       </div>
     </form>

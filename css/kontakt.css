@@ -70,6 +70,6 @@ form textarea {
     margin-bottom: 15px;
     height: 45px;
 }
-#przycisk-formularz:hover {
+.przycisk-formularz:hover {
     background-color: rgba(10, 29, 72,0.6);
 }
