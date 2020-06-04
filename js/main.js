@@ -1,3 +1,7 @@
+$('.carousel').carousel({
+  interval: 100
+})
+
 function zapiszZamowienie() {
 
     var zamowienie = {};
