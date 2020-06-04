@@ -35,10 +35,10 @@
       crossorigin="anonymous"
     ></script>
     <title>dejviS</title>
-    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     <!-- Personalizowany kod CSS -->
     <link rel="stylesheet" href="css/main.css" />
-
+    <link rel="stylesheet" href="css/oferta.css" />
     <!-- Personalizowany kod JavaScript -->
     <script src="js/main.js"></script>
   </head>
@@ -50,10 +50,75 @@
         <li><a href="#">Oferta</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
         <li>
-          <button type="button" class="przycisk" id="przycisk-koszyk" onclick="window.location = 'koszyk.html'"></button>
+          <button
+            type="button"
+            class="przycisk"
+            id="przycisk-koszyk"
+            onclick="window.location = 'koszyk.html'"
+          ></button>
         </li>
       </ul>
     </nav>
+    <div id="spacer"></div>
+    <div class="box">
+      <h1>Oferta</h1>
+      <div id="kartaOferty">
+        <div class="oferta">
+          <div
+            class="zdjecieOferta"
+            style="background-image: url('img/google.png');"
+          ></div>
+          <div class="tekstOferta">
+            <h3>Optymalizacja SEO</h3>
+            <p>
+              Profesjonalnie zajmiemy się pozycjonowaniem Twojej strony TAK, aby każdy mógł ją zobaczyć!
+            </p>
+            <p>
+              Cena<br>150zł/strona
+            </p>
+          </div>
+          <div class="przyciskOferta">
+            <button>Zamów</button>
+          </div>
+        </div>
+        <div class="oferta">
+          <div
+            class="zdjecieOferta"
+            style="background-image: url('img/coding.png');"
+          ></div>
+          <div class="tekstOferta">
+            <h3>Zaprojektowanie i stworzenie aplikacji WWW</h3>
+            <p>
+              Od zera zaprojektujemy dla Ciebie stronę dopasowaną do Twoich potrzeb!
+            </p>
+            <p>
+              Cena<br>Do uzgodnienia
+            </p>
+          </div>
+          <div class="przyciskOferta">
+            <button onclick="window.location = 'kontakt.html'">Kontakt</button>
+          </div>
+        </div>
+        <div class="oferta">
+          <div
+            class="zdjecieOferta"
+            style="background-image: url('img/analysis.png');"
+          ></div>
+          <div class="tekstOferta">
+            <h3>Analiza strony</h3>
+            <p>
+              Zajmiemy się marketingiem Twojej strony i uczynimy ją bardziej atrakcyjną dla klientów!
+            </p>
+            <p>
+              Cena<br>400zł/strona
+            </p>
+          </div>
+          <div class="przyciskOferta">
+            <button>Zamów</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer>Dawid Zając | Projekt 2k20 Narzędzia Internetowe</footer>
   </body>
 </html>

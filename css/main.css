@@ -109,6 +109,15 @@ a:hover {
   width: 100%;
   height: 20vh;
   background-color: rgba(252, 90, 134, 0.9);
+  color: white;
+  text-shadow: 1px 1px 1px rgb(46, 46, 46);
+  font-family: "Iceland", cursive;
+  text-align: center;
+  display: flex;
+  font-size: 4rem;
+  flex-direction: column;
+  padding-top: 6vh;
+  align-items: center;
 }
 .containter {
   width: 70%;
@@ -219,34 +228,30 @@ nav > a {
 
 #wizytowka-technologie {
   height: 40%;
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-left: 12.5vw;
 }
 .technologia {
   background-color: white;
+  background-size: 150px;
+  min-width: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
   overflow: hidden;
   position: relative;
   height: 30vh;
   top: 5vh;
-}
-#vuejs {
-  grid-column-start: 2;
-  grid-column-end: 2;
-}
-#typeScript {
-  grid-column-start: 4;
-  grid-column-end: 4;
-}
-#scss {
-  grid-column-start: 6;
-  grid-column-end: 6;
+  width: 25vw;
 }
 #polecenia {
   height: 50%;
 }
 
 #omnie {
+  display: flex;
+  align-items: center;
   text-align: center;
   color: white;
   height: 60%;
@@ -272,4 +277,20 @@ footer {
   font-size: 0.8rem;
   text-align: center;
   padding-top: 7px;
+}
+
+@media (max-width: 1100px) {
+  #wizytowka-technologie {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: min-content;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    margin-bottom: 10vh;
+  }
+  .technologia {
+    width: 60vw;
+    min-height: 150px;
+  }
 }
